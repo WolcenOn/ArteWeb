@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco de Goya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Francisco de Goya</h1>
+        <p>Puente entre el arte moderno y la sensibilidad contemporánea</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="antiguo.html">Arte antiguo</a></li>
+            <li><a href="romanico.html">Románico</a></li>
+            <li><a href="moderno.html">Arte moderno</a></li>
+            <li><a href="goya.html">Goya</a></li>
+            <li><a href="contemporaneo.html">Contemporáneo</a></li>
+            <li><a href="vanguardias.html">Vanguardias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="caja">
+            <h2>Importancia de Goya</h2>
+            <p>
+                Goya es uno de los artistas más influyentes del arte español. Su obra abarca retratos,
+                escenas históricas y pinturas de gran fuerza expresiva, anticipando rasgos del arte contemporáneo.
+            </p>
+        </section>
+
+        <section>
+            <h2>Obras y rasgos</h2>
+            <table>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Retrato</td>
+                    <td>Gran capacidad psicológica y observación del personaje.</td>
+                </tr>
+                <tr>
+                    <td>Historia</td>
+                    <td>Refleja conflictos y violencia de su época.</td>
+                </tr>
+                <tr>
+                    <td>Técnica</td>
+                    <td>Uso muy expresivo del color y la pincelada.</td>
+                </tr>
+                <tr>
+                    <td>Innovación</td>
+                    <td>Abre camino a estilos posteriores.</td>
+                </tr>
+                <tr>
+                    <td>Legado</td>
+                    <td>Es una figura central de la pintura española.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="galeria">
+            <h2>Galería</h2>
+            <img src="img/goya.jpg" alt="Obra de Goya">
+            <img src="img/velazquez.jpg" alt="Pintura española">
+            <img src="img/picasso.jpg" alt="Continuidad artística posterior">
+        </section>
+    </main>
+
+    <footer>
+        <p>Arte en España | Página dedicada a Goya</p>
+    </footer>
+
+</body>
+</html>
