@@ -15,96 +15,44 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="antiguo.html">Arte antiguo</a></li>
-            <li><a href="romanico.html">Románico</a></li>
-            <li><a href="moderno.html">Arte moderno</a></li>
-            <li><a href="goya.html">Goya</a></li>
-            <li><a href="contemporaneo.html">Contemporáneo</a></li>
-            <li><a href="vanguardias.html">Vanguardias</a></li>
+            <li><a href="#antiguo">Antiguo</a></li>
+            <li><a href="#moderno">Moderno</a></li>
+            <li><a href="#contemporaneo">Contemporáneo</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="caja">
-            <h2>Bienvenida</h2>
-            <p>
-                Esta web presenta la evolución del arte en España a través de tres grandes épocas:
-                la etapa antigua, la moderna y la contemporánea. El objetivo es mostrar cómo han
-                cambiado los estilos, los materiales, los temas y los artistas a lo largo del tiempo.
-            </p>
-            <a class="boton" href="antiguo.html">Comenzar el recorrido</a>
-        </section>
-
-        <section>
-            <h2>Las tres épocas principales</h2>
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h3>Arte antiguo</h3>
-                    <p>Desde las pinturas rupestres hasta el arte románico, con un fuerte valor simbólico y religioso.</p>
-                </article>
-
-                <article class="tarjeta">
-                    <h3>Arte moderno</h3>
-                    <p>Incluye el Siglo de Oro, Velázquez y Goya, con una gran riqueza técnica y temática.</p>
-                </article>
-
-                <article class="tarjeta">
-                    <h3>Arte contemporáneo</h3>
-                    <p>La etapa de Picasso, Dalí y las vanguardias, donde la creatividad rompe con lo tradicional.</p>
-                </article>
+        <section id="antiguo" class="zona">
+            <div class="caja mover">
+                <h2>Arte antiguo</h2>
+                <p>
+                    En esta etapa destacan las pinturas rupestres, el arte ibérico
+                    y las primeras manifestaciones artísticas en la península.
+                </p>
             </div>
         </section>
 
         <section class="parallax"></section>
 
-        <section class="caja">
-            <h2>Características del arte español</h2>
-            <ul class="lista">
-                <li>Gran diversidad de estilos a lo largo de la historia.</li>
-                <li>Influencia religiosa en muchas etapas.</li>
-                <li>Presencia de artistas de fama internacional.</li>
-                <li>Riqueza en pintura, escultura y arquitectura.</li>
-                <li>Fusión entre tradición e innovación.</li>
-            </ul>
+        <section id="moderno" class="zona">
+            <div class="caja mover">
+                <h2>Arte moderno</h2>
+                <p>
+                    El arte moderno en España incluye grandes figuras como Velázquez
+                    y Goya, con una pintura de enorme riqueza técnica y expresiva.
+                </p>
+            </div>
         </section>
 
-        <section>
-            <h2>Obras y etapas destacadas</h2>
-            <table>
-                <tr>
-                    <th>Época</th>
-                    <th>Ejemplo representativo</th>
-                </tr>
-                <tr>
-                    <td>Prehistoria</td>
-                    <td>Pinturas rupestres de Altamira</td>
-                </tr>
-                <tr>
-                    <td>Románico</td>
-                    <td>Pintura mural e iglesias medievales</td>
-                </tr>
-                <tr>
-                    <td>Siglo de Oro</td>
-                    <td>Las Meninas de Velázquez</td>
-                </tr>
-                <tr>
-                    <td>Modernidad</td>
-                    <td>La obra de Goya</td>
-                </tr>
-                <tr>
-                    <td>Contemporáneo</td>
-                    <td>Guernica de Picasso</td>
-                </tr>
-            </table>
-        </section>
+        <section class="parallax"></section>
 
-        <section>
-            <h2>Galería inicial</h2>
-            <div class="galeria">
-                <img src="img/cueva.jpg" alt="Pintura rupestre">
-                <img src="img/velazquez.jpg" alt="Pintura del arte moderno">
-                <img src="img/picasso.jpg" alt="Arte contemporáneo">
+        <section id="contemporaneo" class="zona">
+            <div class="caja mover">
+                <h2>Arte contemporáneo</h2>
+                <p>
+                    En el siglo XX y XXI destacan Picasso, Dalí y las vanguardias,
+                    con una gran libertad creativa y nuevas formas de expresión.
+                </p>
             </div>
         </section>
     </main>
@@ -112,6 +60,30 @@
     <footer>
         <p>Proyecto HTML + CSS | Arte en España</p>
     </footer>
+
+    <script>
+        const zonas = document.querySelectorAll('.zona');
+        const cajas = document.querySelectorAll('.mover');
+
+        function activarEfectos() {
+            zonas.forEach(zona => {
+                const rect = zona.getBoundingClientRect();
+
+                if (rect.top <= window.innerHeight * 0.6 && rect.bottom >= 150) {
+                    document.body.className = "";
+                    document.body.classList.add(zona.id);
+
+                    const caja = zona.querySelector('.mover');
+                    if (caja) {
+                        caja.classList.add('visible');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', activarEfectos);
+        activarEfectos();
+    </script>
 
 </body>
 </html>
