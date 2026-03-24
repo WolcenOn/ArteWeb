@@ -1,39 +1,19 @@
-/* =========================================
+/* -------------------------
    ESTILOS GENERALES
-========================================= */
+------------------------- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f1e8;
     color: #2f2a26;
-    line-height: 1.6;
+    background: #f7f1e8;
+    transition: background-color 0.7s ease;
 }
 
-h1, h2, h3 {
-    margin-top: 0;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    border-radius: 8px;
-}
-
-/* =========================================
-   COLORES PRINCIPALES
-   1. Marrón oscuro: #5c3b1e
-   2. Beige claro:   #f7f1e8
-   3. Rojo teja:     #a64b2a
-========================================= */
-
-/* =========================================
-   CABECERA Y MENÚ
-========================================= */
 header {
     background: #5c3b1e;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 25px;
 }
 
 nav {
@@ -44,9 +24,9 @@ nav {
 }
 
 nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
     text-align: center;
 }
 
@@ -65,133 +45,69 @@ nav a:hover {
     background: #7d341b;
 }
 
-/* =========================================
-   CONTENIDO
-========================================= */
 main {
     width: 85%;
-    max-width: 1100px;
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: auto;
 }
 
 section {
-    margin-bottom: 40px;
+    padding: 80px 0;
+    min-height: 300px;
 }
 
-article {
-    margin-bottom: 25px;
-}
-
+/* -------------------------
+   CAJAS
+------------------------- */
 .caja {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-left: 6px solid #a64b2a;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.tarjetas {
-    text-align: center;
+/* Empieza desplazada */
+.mover {
+    opacity: 0;
+    transform: translateX(-120px);
+    transition: transform 0.9s ease, opacity 0.9s ease;
 }
 
-.tarjeta {
-    display: inline-block;
-    width: 280px;
-    vertical-align: top;
-    margin: 10px;
-    padding: 15px;
-    background: white;
-    border: 1px solid #d9c8b8;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Cuando entra en pantalla */
+.mover.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* Animación */
-.tarjeta:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-/* =========================================
-   TABLA
-========================================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-}
-
-th, td {
-    border: 1px solid #cdb8a5;
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background: #5c3b1e;
-    color: white;
-}
-
-/* =========================================
-   LISTA
-========================================= */
-ul.lista {
-    background: white;
-    padding: 20px 35px;
-    border-radius: 10px;
-    border-left: 6px solid #5c3b1e;
-}
-
-/* =========================================
-   GALERÍA
-========================================= */
-.galeria img {
-    width: 32%;
-    display: inline-block;
-    margin: 0.5%;
-    height: 220px;
-    object-fit: cover;
-}
-
-/* =========================================
+/* -------------------------
    PARALLAX
-========================================= */
+------------------------- */
 .parallax {
-    background-image: url("../img/hero.jpg");
-    min-height: 320px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("../img/hero.jpg") center / cover fixed no-repeat;
+    height: 420px;
     border-radius: 12px;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
-/* =========================================
-   BOTÓN
-========================================= */
-.boton {
-    display: inline-block;
-    background: #a64b2a;
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 8px;
+/* -------------------------
+   CAMBIO DE COLOR POR SECCIÓN
+------------------------- */
+body.antiguo {
+    background-color: #f7f1e8;
 }
 
-.boton:hover {
-    background: #7d341b;
+body.moderno {
+    background-color: #efe3d3;
 }
 
-/* =========================================
-   PIE
-========================================= */
+body.contemporaneo {
+    background-color: #e6e6e6;
+}
+
 footer {
     background: #5c3b1e;
     color: white;
     text-align: center;
     padding: 18px;
-    margin-top: 40px;
 }
