@@ -1,0 +1,10 @@
+{
+  "categoria": "Arte",
+  "icono": "🎨",
+  "etiquetas": ["arte", "web", "creatividad", "diseño"],
+  "descripcion": "Proyecto web relacionado con arte, diseño o creación visual.",
+  "demo": "",
+  "destacado": false,
+  "orden": 51,
+  "ocultar": false
+}
